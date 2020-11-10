@@ -78,20 +78,20 @@ export default class OAuth2 {
     let payload = objectExtend({}, userData)
 
     for (let key in this.providerConfig.responseParams) {
-      let value = this.providerConfig.responseParams[key]
+      const value = this.providerConfig.responseParams[key]
 
       switch(key) {
         case 'code':
           payload[key] = oauth.code
           break
         case 'clientId':
-          payload[key] = this.providerConfig.clientId
+          payload[value] = this.providerConfig.clientId
           break
         case 'redirectUri':
-          payload[key] = this.providerConfig.redirectUri
+          payload[value] = this.providerConfig.redirectUri
           break
         default:
-          payload[key] = oauth[key]
+          payload[key] = oauth[key] || value
       }
     }
 
