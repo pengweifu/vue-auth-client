@@ -1,5 +1,5 @@
 {
-  "name": "vue-authenticate",
+  "name": "vue-auth-client",
   "version": "1.4.1",
   "description": "Authentication library for Vue.js",
   "main": "dist/vue-authenticate.min.js",
