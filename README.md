@@ -1,20 +1,8 @@
-[**WARNING**]: README file is currently in process of rewrite and will be released soon.
+fork from https://github.com/dgrubelic/vue-authenticate
 
 # vue-authenticate
 
-[![Join the chat at https://gitter.im/vuejs-auth/vue-authenticate](https://badges.gitter.im/vue-authenticate/Lobby.svg)](https://gitter.im/vuejs-auth/vue-authenticate?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-**vue-authenticate** is easily configurable solution for [Vue.js](https://vuejs.org/) that provides local login/registration as well as Social login using Github, Facebook, Google and other OAuth providers.
-
-
-
-The best part about this library is that it is not strictly coupled to one request handling library like [vue-axios](https://github.com/imcvampire/vue-axios). You will be able to use it with different libraries. 
-
-For now it is tested to work with  [vue-resource](https://github.com/pagekit/vue-resource) and [axios](https://github.com/mzabriskie/axios) (using [vue-axios](https://github.com/imcvampire/vue-axios) wrapper).
-
-**WARNING:** From version 1.3.0 default request library is `axios` using `vue-axios` wrapper plugin.
-
-This library was inspired by well known authentication library for Angular called [Satellizer](https://github.com/sahat/satellizer) developed by [Sahat Yalkabov](http://sahatyalkabov.com). They share almost identical configuration and API so you can easily switch from Angular to Vue.js project.
+modify oauth2 providers config to support [laravel](https://laravel.com) passport
 
 ## Supported OAuth providers and configurations
 
@@ -47,7 +35,20 @@ Vue.use(VueAuthenticate, {
     github: {
       clientId: '',
       redirectUri: 'http://localhost:8080/auth/callback' // Your client app URL
-    }
+    },
+
+    oauth2: {
+      url: '/oauth/token',
+      authorizationEndpoint: 'https://laravel.test/oauth/authorize',
+      clientId: '4',
+      responseParams: {
+        code: 'code',
+        grant_type: 'authorization_code',
+        client_secret: 'WOfm88oUTYQgYdCB0RhndBY7tgUYh4LGg3vP4nof',
+        clientId: 'client_id',
+        redirectUri: 'redirect_uri'
+      }
+    },
   }
 })
 ```
