@@ -23,13 +23,13 @@
     "oauth2"
   ],
   "author": {
-    "name": "Davor Grubelic",
-    "email": "davor.grubelic@gmail.com",
-    "url": "https://dgrubelic.me"
+    "name": "pengweifu",
+    "email": "admin@pengwf.com",
+    "url": "https://www.pengwf.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dgrubelic/vue-authenticate.git"
+    "url": "https://github.com/pengweifu/vue-auth-client"
   },
   "files": [
     "dist"
