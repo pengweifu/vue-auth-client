@@ -1,6 +1,6 @@
 {
   "name": "vue-auth-client",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Authentication library for Vue.js",
   "main": "dist/vue-authenticate.min.js",
   "module": "dist/vue-authenticate.es2015.js",
@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pengweifu/vue-auth-client"
+    "url": "https://github.com/pengweifu/vue-auth-client.git"
   },
   "files": [
     "dist"
