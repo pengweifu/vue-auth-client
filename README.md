@@ -17,14 +17,14 @@ modify oauth2 providers config to support [laravel](https://laravel.com) passpor
 
 ## Installation
 ```bash
-npm install vue-authenticate
+npm install vue-auth-client
 ```
 
 ## Usage
 ```javascript
 import Vue from 'vue'
 import VueAxios from 'vue-axios'
-import VueAuthenticate from 'vue-authenticate'
+import VueAuthenticate from 'vue-auth-client'
 import axios from 'axios';
 
 Vue.use(VueAxios, axios)
@@ -34,7 +34,7 @@ Vue.use(VueAuthenticate, {
   providers: {
     github: {
       clientId: '',
-      redirectUri: 'http://localhost:8080/auth/callback' // Your client app URL
+      redirectUri: 'http://localhost:3000/auth/callback' // Your client app URL
     },
 
     oauth2: {
@@ -107,14 +107,14 @@ new Vue({
 import Vue from 'vue'
 import Vuex from 'vuex'
 import VueAxios from 'vue-axios'
-import { VueAuthenticate } from 'vue-authenticate'
+import { VueAuthenticate } from 'vue-auth-client'
 import axios from 'axios';
 
 Vue.use(Vuex)
 Vue.use(VueAxios, axios)
 
 const vueAuth = new VueAuthenticate(Vue.prototype.$http, {
-  baseUrl: 'http://localhost:4000'
+  baseUrl: 'http://localhost:3000'
 })
 ```
 
@@ -131,7 +131,7 @@ Vue.use(VueAxios, axios)
 
 // ES5, CommonJS example
 var vueAuth = VueAuthenticate.factory(Vue.prototype.$http, {
-  baseUrl: 'http://localhost:4000'
+  baseUrl: 'http://localhost:3000'
 })
 ```
 
